@@ -1,100 +1,105 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description"
+          content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google.">
+    <meta name="keywords"
+          content="materialize, admin template, dashboard template, flat admin template, responsive admin template, eCommerce dashboard, analytic dashboard">
+    <meta name="author" content="ThemeSelect">
+    <title>Fondo App | Welcome</title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/favicon/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- BEGIN: VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/vendors.min.css">
+    <!-- END: VENDOR CSS-->
+    <!-- BEGIN: Page Level CSS-->
+    <link rel="stylesheet" type="text/css"
+          href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
+    <link rel="stylesheet" type="text/css"
+          href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/page-knowledge.css">
+    <!-- END: Page Level CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/custom/custom.css">
+    <!-- END: Custom CSS-->
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-image: url( '{{ asset("app-assets/background/background-f.jpg") }}' );
+            background-repeat:no-repeat;
+            background-position:100% 100%;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-attachment: fixed;
+        }
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        #main {
+            opacity: 0.7;
+        }
+    </style>
 
-            .full-height {
-                height: 100vh;
-            }
+</head>
+<body>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
 
-            .position-ref {
-                position: relative;
-            }
+<div id="main" class="main-full">
+    <div class="row">
+        <div class="content-wrapper-before "></div>
+        <div class="col s12 l12">
+            <div class="container">
+                <!-- knowledge -->
+                <div class="section" id="knowledge">
+                    <div class="row knowledge-content">
+                        <div class="col s12">
+                            <div id="search" class="card z-depth-0 center-align p-35 mt-10">
+                                <div class="card-content">
+                                    <h5 class="center-align mb-3">Welcome to <b>Fondo</b>. How can we help you?</h5>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
 
-            .content {
-                text-align: center;
-            }
+                                    <div class="col s12 m6">
+                                        <div class="card card-hover z-depth-0 card-border-gray">
+                                            <a href="page-knowledge-licensing.html">
+                                                <div class="card-content center-align">
+                                                    <h5><b>Investor</b></h5>
+                                                    <i class="material-icons md-48 red-text">favorite_border</i>
+                                                    <p class="mb-2 black-text">I want to Invest</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                                    <div class="col s12 m6">
+                                        <div class="card card-hover z-depth-0 card-border-gray">
+                                            <a href="page-knowledge-licensing.html">
+                                                <div class="card-content center-align">
+                                                    <h5><b>Entrepreneur</b></h5>
+                                                    <i class="material-icons md-48 amber-text">filter_none</i>
+                                                    <p class="mb-2 black-text">I am looking for funding</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- START RIGHT SIDEBAR NAV -->
             </div>
         </div>
-    </body>
+    </div>
+</div>
+
+
+<script src="../../../app-assets/js/vendors.min.js" type="text/javascript"></script>
+<script src="../../../app-assets/js/plugins.js" type="text/javascript"></script>
+<script src="../../../app-assets/js/custom/custom-script.js" type="text/javascript"></script>
+<script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+</body>
 </html>
