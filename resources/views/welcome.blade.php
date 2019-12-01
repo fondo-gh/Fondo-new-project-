@@ -31,7 +31,7 @@
 
     <style type="text/css">
         body {
-            background-image: url( '{{ asset("app-assets/background/background-f.jpg") }}' );
+            background-image: url( '{{ asset("app-assets/background/background-h.jpg") }}' );
             background-repeat:no-repeat;
             background-position:100% 100%;
             background-size: cover;
@@ -47,7 +47,6 @@
 
 </head>
 <body>
-
 
 <div id="main" class="main-full">
     <div class="row">
@@ -65,7 +64,7 @@
 
                                     <div class="col s12 m6">
                                         <div class="card card-hover z-depth-0 card-border-gray">
-                                            <a href="page-knowledge-licensing.html">
+                                            <a href="{{ route('admin.register') }}">
                                                 <div class="card-content center-align">
                                                     <h5><b>Investor</b></h5>
                                                     <i class="material-icons md-48 red-text">favorite_border</i>
@@ -77,7 +76,7 @@
 
                                     <div class="col s12 m6">
                                         <div class="card card-hover z-depth-0 card-border-gray">
-                                            <a href="page-knowledge-licensing.html">
+                                            <a href="{{ route('register') }}">
                                                 <div class="card-content center-align">
                                                     <h5><b>Entrepreneur</b></h5>
                                                     <i class="material-icons md-48 amber-text">filter_none</i>
