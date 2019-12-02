@@ -23,6 +23,40 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('auth.pages.profile');
     }
+
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function notification()
+    {
+        return view('auth.pages.notification');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function startup()
+    {
+        return view('auth.pages.startup');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function updateProfile()
+    {
+        return view('auth.pages.profile_update');
+    }
+
+
+
 }
