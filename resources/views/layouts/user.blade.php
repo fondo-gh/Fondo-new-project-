@@ -30,9 +30,11 @@
 @include('partials.headers._user_side_nav')
 <!-- END: SideNav-->
 
+@include('partials.alerts._errors')
 
 <!-- BEGIN: Page Main-->
 <div id="main">
+
     @yield('content')
 </div>
 <!-- END: Page Main-->
@@ -49,5 +51,16 @@
 
 @yield('scripts')
 
+<script>
+    //success alert
+    @if(session('success'))
+    swal({
+        title: 'Success',
+        icon: 'success',
+        text: '{{ session('success') }}',
+    });
+    @endif
+
+</script>
 </body>
 </html>

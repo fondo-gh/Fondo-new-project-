@@ -33,7 +33,8 @@
                                 class="material-icons hide-on-med-and-up">settings</i><span class="hide-on-small-onl">Settings</span><i
                                 class="material-icons right">arrow_drop_down</i></a>
                         <ul class="dropdown-content" id="dropdown1" tabindex="0">
-                            <li tabindex="0"><a class="grey-text text-darken-2" href="#">Update
+                            <li tabindex="0"><a class="grey-text text-darken-2"
+                                                href=" {{ route('profile.update.page') }}">Update
                                     Profile</a></li>
                             <li tabindex="0"><a class="grey-text text-darken-2" href="#">Add
                                     Professional Skills</a></li>
@@ -56,19 +57,26 @@
                         <div class="row mt-2">
                             <div class="col s12 m6 l4 card-width">
                                 <div class="card-panel border-radius-6 mt-10 card-animation-1">
-                                    <img class="responsive-img border-radius-8 z-depth-4 image-n-margin"
-                                         src="../../../app-assets/images/cards/news-fashion.jpg"
-                                         alt=""/>
+                                    @if(auth()->user()->profile_image)
+                                        <img class="responsive-img border-radius-8 z-depth-4 image-n-margin"
+                                             src="{{ asset('uploads/'. auth()->user()->profile_image) }}"
+                                             alt="Profile Image"/>
+                                    @else
+                                        <img class="responsive-img border-radius-8 z-depth-4 image-n-margin"
+                                             src="../../../app-assets/images/cards/news-fashion.jpg"
+                                             alt="Profile Image"/>
+                                    @endif
                                     <div class="card-content">
-                                        <a class="btn-floating activator btn-move-up waves-effect waves-light red accent-2 z-depth-4 right" href="{{ route('profile.update') }}">
+                                        <a class="btn-floating activator btn-move-up waves-effect waves-light red accent-2 z-depth-4 right"
+                                           href="{{ route('profile.update.page') }}">
                                             <i class="material-icons">edit</i>
                                         </a>
                                         <h5 class="card-title activator grey-text text-darken-4">Roger Waters</h5>
-                                        <p><i class="material-icons profile-card-i">perm_identity</i> Accra</p>
-                                        <p><i class="material-icons profile-card-i">perm_phone_msg</i> +1 (612) 222 8989
+                                        <p><i class="material-icons profile-card-i">perm_identity</i> {{ auth()->user()->residence ?? "Residence not set" }}</p>
+                                        <p><i class="material-icons profile-card-i">perm_phone_msg</i> {{ auth()->user()->contact_number ?? "Contact Number not set" }}
                                         </p>
-                                        <p><i class="material-icons profile-card-i">email</i> yourmail@domain.com</p>
-                                        <p><i class="material-icons profile-card-i">phone</i> 475847363734</p>
+                                        <p><i class="material-icons profile-card-i">email</i> {{ auth()->user()->email }}</p>
+                                        <p><i class="material-icons profile-card-i">phone</i> {{ auth()->user()->account_number ?? "Account Number Not Set" }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +87,8 @@
                                     <p class="mt-4 mb-0">Let your investors know your potentials</p>
 
                                     <div class="card-content">
-                                        <a class="btn-floating modal-trigger btn-move-up waves-effect waves-light red accent-2 z-depth-4 right" href="#modal1">
+                                        <a class="btn-floating modal-trigger btn-move-up waves-effect waves-light red accent-2 z-depth-4 right"
+                                           href="#modal1">
                                             <i class="material-icons">add</i>
                                         </a>
                                         <ul class="collection">

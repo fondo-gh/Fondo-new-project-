@@ -1,6 +1,4 @@
 @extends('layouts.user')
-
-
 @section('styles')
     <!-- BEGIN: VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/vendors.min.css">
@@ -48,13 +46,12 @@
                         </div>
                     </div>
 
-
-
                     <!-- Linear Stepper -->
-
                     <div class="row">
                         <div class="col s12">
                             <div class="card">
+                                <form method="post" enctype="multipart/form-data" action="{{ route('profile.update') }}">
+                                    @csrf
                                 <div class="card-content">
                                     <div class="card-header">
                                         <h4 class="card-title">Linear Stepper</h4>
@@ -67,23 +64,12 @@
 
                                                 <div class="row mt-4">
                                                     <div class="col s12 m12 l12">
-                                                        <input type="file" id="input-file-now" class="dropify" data-default-file="" />
+                                                        <input type="file" id="input-file-now" name="image" class="dropify" data-default-file=""/>
                                                     </div>
                                                 </div>
 
                                                 <div class="step-actions">
                                                     <div class="row">
-                                                        <div class="col m4 s12 mb-3">
-                                                            <button class="red btn btn-reset" type="reset">
-                                                                <i class="material-icons left">clear</i>Reset
-                                                            </button>
-                                                        </div>
-                                                        <div class="col m4 s12 mb-3">
-                                                            <button class="btn btn-light previous-step" disabled>
-                                                                <i class="material-icons left">arrow_back</i>
-                                                                Prev
-                                                            </button>
-                                                        </div>
                                                         <div class="col m4 s12 mb-3">
                                                             <button class="waves-effect waves dark btn btn-primary next-step"
                                                                     type="submit">
@@ -101,21 +87,21 @@
                                                 <div class="row mt-4">
                                                     <div class="input-field col m6 s12">
                                                         <label for="proposal1">Name <span class="red-text">*</span></label>
-                                                        <input type="text" class="validate" id="proposal1" name="proposal1" required>
+                                                        <input type="text" class="validate" id="proposal1" name="name" value="{{ $user->name }}" required>
                                                     </div>
                                                     <div class="input-field col m6 s12">
                                                         <label for="job1">Residence: <span class="red-text">*</span></label>
-                                                        <input type="text" class="validate" id="job1" name="job1" required>
+                                                        <input type="text" class="validate" id="job1" name="residence" value="{{ $user->residence }}" required>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field col m6 s12">
                                                         <label for="company1">Contact Number:</label>
-                                                        <input type="text" class="validate" id="company1" name="company1">
+                                                        <input type="text" class="validate" id="company1" name="contact_number" value="{{ $user->contact_number }}" required>
                                                     </div>
                                                     <div class="input-field col m6 s12">
                                                         <label for="url1">Account Number:</label>
-                                                        <input type="url" class="validate" id="url1">
+                                                        <input type="text" class="validate" id="url1" value="{{ $user->account_number }}" name="account_number" required >
                                                     </div>
                                                 </div>
 
@@ -133,7 +119,7 @@
                                                             </button>
                                                         </div>
                                                         <div class="col m4 s12 mb-3">
-                                                            <button class="waves-effect waves dark btn btn-primary next-step"
+                                                            <button class="waves-effect waves dark btn btn-primary"
                                                                     type="submit">
                                                                 Next
                                                                 <i class="material-icons right">arrow_forward</i>
@@ -146,6 +132,9 @@
                                         </li>
                                     </ul>
                                 </div>
+
+                                </form>
+
                             </div>
                         </div>
                     </div>

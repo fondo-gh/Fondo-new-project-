@@ -15,3 +15,8 @@
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="../../../app-assets/js/scripts/cards-extended.js" type="text/javascript"></script>
 <script src="../../../app-assets/js/custom/custom-script.js" type="text/javascript"></script>
+
+
+<script src="../../../app-assets/js/scripts/ui-alerts.js" type="text/javascript"></script>
+<script src="../../../app-assets/vendors/sweetalert/sweetalert.min.js"></script>
+<script src="../../../app-assets/js/scripts/extra-components-sweetalert.js" type="text/javascript"></script>

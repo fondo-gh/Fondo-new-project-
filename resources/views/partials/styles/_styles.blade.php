@@ -13,3 +13,6 @@
 <!-- BEGIN: Custom CSS-->
 <link rel="stylesheet" type="text/css" href="../../../app-assets/css/custom/custom.css">
 <!-- END: Custom CSS-->
+
+<link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/sweetalert/sweetalert.css">
+

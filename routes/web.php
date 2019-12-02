@@ -25,7 +25,10 @@ Auth::routes();
 
 //page routes
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile/update', 'HomeController@updateProfile')->name('profile.update');
+Route::get('/profile/update/page', 'HomeController@getUpdateProfilePage')->name('profile.update.page');
+Route::post('/profile/update', 'HomeController@updateProfile')->name('profile.update');
+
+
 Route::get('/notification', 'HomeController@notification')->name('notification');
 Route::get('/startup', 'HomeController@startup')->name('startup');
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
