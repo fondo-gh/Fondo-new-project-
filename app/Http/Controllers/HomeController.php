@@ -95,6 +95,31 @@ class HomeController extends Controller
         return redirect()->route('home');
     }
 
+    /**
+     * Add profile skills of user
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function addProfileSkills(Request $request) {
+        $this->validate($request, [
+            'name' => 'required|string',
+        ]);
+
+        //find the current user
+        $user = User::find(auth()->id());
+
+        //update user info
+        $user->user_skills()->create($request->all());
+
+        //success info
+        session()->flash('success', 'User skill added successfully.');
+
+        return redirect()->back();
+    }
+
+
+
 
 
 }

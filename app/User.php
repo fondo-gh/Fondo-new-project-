@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * A user has many professional skills
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function user_skills() {
+        return $this->hasMany(UserSkill::class);
+    }
 }

@@ -92,8 +92,9 @@
                                             <i class="material-icons">add</i>
                                         </a>
                                         <ul class="collection">
-                                            <li class="collection-item">Fluent in Communication</li>
-                                            <li class="collection-item">IT literate</li>
+                                            @foreach(auth()->user()->user_skills as $skill)
+                                            <li class="collection-item">{{ $skill->name }}</li>
+                                            @endforeach
                                         </ul>
 
                                     </div>
@@ -112,24 +113,26 @@
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal border-radius-6">
+
+        <form class="col s12" method="post" action="{{ route('profile.skills.add') }}">
+            @csrf
         <div class="modal-content">
             <h5 class="mt-0">Add Professional Skill</h5>
             <div class="row">
-                <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="subject" type="text" class="validate">
+                            <input id="subject" type="text" class="validate" name="name" value="{{ old('name') }}" required>
                             <label for="subject">Skill Name</label>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
         <div class="modal-footer">
-            <a class="btn  waves-effect waves-light mr-2">
+            <button type="submit" class="btn  waves-effect waves-light mr-2">
                 <i class="material-icons">add</i> Add
-            </a>
+            </button>
         </div>
+        </form>
     </div>
     <!-- Modal Structure Ends --><!-- START RIGHT SIDEBAR NAV -->
 

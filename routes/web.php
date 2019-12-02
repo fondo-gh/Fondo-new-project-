@@ -27,6 +27,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile/update/page', 'HomeController@getUpdateProfilePage')->name('profile.update.page');
 Route::post('/profile/update', 'HomeController@updateProfile')->name('profile.update');
+Route::post('/profile/skills/add', 'HomeController@addProfileSkills')->name('profile.skills.add');
 
 
 Route::get('/notification', 'HomeController@notification')->name('notification');
