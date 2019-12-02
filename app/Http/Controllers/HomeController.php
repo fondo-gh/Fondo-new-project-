@@ -118,6 +118,9 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function getStartupShowPage() {
+        return view('auth.pages.startup_show');
+    }
 
 
 

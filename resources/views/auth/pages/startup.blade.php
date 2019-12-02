@@ -54,7 +54,7 @@
                                         <span>Sarah</span>
                                     </h2>
                                     <p>Sarah likes to watch clouds. She's quite depressed.</p>
-                                    <a href="media-hover-effects.html#">View more</a>
+                                    <a href="{{ route('startup.show') }}">View more</a>
                                 </figcaption>
                             </figure>
                         </div>

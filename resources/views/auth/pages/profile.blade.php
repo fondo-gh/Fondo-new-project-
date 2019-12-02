@@ -36,8 +36,6 @@
                             <li tabindex="0"><a class="grey-text text-darken-2"
                                                 href=" {{ route('profile.update.page') }}">Update
                                     Profile</a></li>
-                            <li tabindex="0"><a class="grey-text text-darken-2" href="#">Add
-                                    Professional Skills</a></li>
                             <li class="divider" tabindex="-1"></li>
                             <li tabindex="0"><a class="grey-text text-darken-2" href="#">Update
                                     Credentials</a></li>

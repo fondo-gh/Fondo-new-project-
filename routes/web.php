@@ -32,6 +32,7 @@ Route::post('/profile/skills/add', 'HomeController@addProfileSkills')->name('pro
 
 Route::get('/notification', 'HomeController@notification')->name('notification');
 Route::get('/startup', 'HomeController@startup')->name('startup');
+Route::get('/startup/show/page', 'HomeController@getStartupShowPage')->name('startup.show');
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 
 
