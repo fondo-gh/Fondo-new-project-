@@ -44,4 +44,12 @@ class User extends Authenticatable
     public function user_skills() {
         return $this->hasMany(UserSkill::class);
     }
+
+    /**
+     * User has many startups
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function startups() {
+        return $this->hasMany(Startup::class);
+    }
 }

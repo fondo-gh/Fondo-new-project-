@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Startup;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -118,8 +119,54 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function getStartupShowPage() {
-        return view('auth.pages.startup_show');
+    /**
+     * Returns page to display the details of the startup
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getStartupShowPage($id) {
+        $startup = Startup::find($id);
+        return view('auth.pages.startup_show')->withStartup($startup);
+    }
+
+    /**
+     * Returns page to create the startup
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getStartupCreatePage(){
+        return view('auth.pages.startup_create');
+    }
+
+    /**
+     * Creates startup
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function storeStartup(Request $request) {
+        $this->validate($request, [
+            'file' => 'image',
+            'name' => 'required|string',
+            'description' => 'required|string',
+            'type' => 'required|string',
+            'category' => 'required|string',
+            'pitch' => 'required|string',
+        ]);
+
+        //store the image
+        if($request->hasFile('file')) {
+            $filename = date('Y-m-d-H:i:s') . "." . $request->file('file')->getClientOriginalExtension();
+            $path = $request->file('file')->storeAs('startups', $filename, 'custom');
+            //attach path to request
+            $request['image'] = $path;
+        }
+
+        //create startup for user
+        $user = User::find(auth()->user()->id);
+        $startup = $user->startups()->create($request->all());
+
+        //success info
+        session()->flash('success', 'Startup created successfully.');
+        return redirect()->route('startup.show', $startup->id);
     }
 
 
