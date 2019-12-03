@@ -44,9 +44,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function startup()
+    public function startups()
     {
-        return view('auth.pages.startup');
+        return view('auth.pages.startups');
     }
 
     /**

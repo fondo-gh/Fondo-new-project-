@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/magnific-popup/magnific-popup.css">
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
+    <link rel="stylesheet" type="text/css"
+          href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/hover-effects/media-hover-effects.css">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
@@ -28,7 +30,7 @@
                         <ol class="breadcrumbs mb-0">
                             <li class="breadcrumb-item"><a href="#">Home</a>
                             </li>
-                            <li class="breadcrumb-item active">Startup Page
+                            <li class="breadcrumb-item active">Startup Page ({{ auth()->user()->startups()->count() }})
                             </li>
                         </ol>
                     </div>
@@ -40,31 +42,36 @@
                 <div class="section">
                     <div class="card">
                         <div class="card-content">
-                            <p class="caption mb-0">Your startup.</p>
+                            <p class="caption mb-0">Your startup(s).</p>
                         </div>
                     </div>
 
                     <div class="row">
-                        <h4 class="col s12">Fondo</h4>
+                        <h4 class="col s12">All Categories</h4>
                         <div class="col s12 m6 grid">
-                            <figure class="effect-sarah">
-                                <img src="../../../app-assets/images/gallery/13.png" alt="img13" />
-                                <figcaption>
-                                    <h2>Free
-                                        <span>Sarah</span>
-                                    </h2>
-                                    <p>Sarah likes to watch clouds. She's quite depressed.</p>
-                                    <a href="{{ route('startup.show') }}">View more</a>
-                                </figcaption>
-                            </figure>
+                            @foreach(auth()->user()->startups as $startup)
+                                <figure class="effect-sarah">
+                                    <img src="{{ asset('uploads/'. $startup->image) }}" alt="img13"/>
+                                    <figcaption>
+                                        <h2>{{ $startup->name }}
+                                            <span>{{ $startup->category }}</span>
+                                        </h2>
+                                        <p>{{ $startup->description }}</p>
+                                        <a href="{{ route('startup.show', $startup->id) }}">View more</a>
+                                    </figcaption>
+                                </figure>
+                            @endforeach
                         </div>
                     </div>
 
                 </div><!-- START RIGHT SIDEBAR NAV -->
                 <!-- END RIGHT SIDEBAR NAV -->
-                <div style="bottom: 50px; right: 19px;" class="fixed-action-btn direction-top"><a class="btn-floating btn-large gradient-45deg-light-blue-cyan gradient-shadow"><i class="material-icons">add</i></a>
+                <div style="bottom: 50px; right: 19px;" class="fixed-action-btn direction-top"><a
+                        class="btn-floating btn-large gradient-45deg-light-blue-cyan gradient-shadow"><i
+                            class="material-icons">add</i></a>
                     <ul>
-                        <li><a href="{{ route('startup.create') }}" class="btn-floating green"><i class="material-icons">widgets</i></a></li>
+                        <li><a href="{{ route('startup.create') }}" class="btn-floating green"><i
+                                    class="material-icons">widgets</i></a></li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +86,8 @@
     <script src="../../../app-assets/js/vendors.min.js" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="../../../app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js"
+            type="text/javascript"></script>
     <script src="../../../app-assets/vendors/imagesloaded.pkgd.min.js" type="text/javascript"></script>
     <script src="../../../app-assets/vendors/masonry.pkgd.min.js" type="text/javascript"></script>
     <!-- END PAGE VENDOR JS-->

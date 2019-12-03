@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col s10 m6 l6">
-                        <h5 class="breadcrumbs-title mt-0 mb-0">Startup Page</h5>
+                        <h5 class="breadcrumbs-title mt-0 mb-0">{{ $startup->name }}</h5>
                         <ol class="breadcrumbs mb-0">
                             <li class="breadcrumb-item"><a href="#">Home</a>
                             </li>
@@ -47,7 +47,7 @@
         <div class="col s12">
             <div class="container">
                 <div class="row user-profile mt-1">
-                    <img class="responsive-img" id="startup-image" alt="" src="{{ asset("app-assets/background/background-h.jpg") }}">
+                    <img class="responsive-img" id="startup-image" alt="" src="{{ asset("uploads/" . $startup->image) }}">
                 </div>
                 <div class="section" id="user-profile">
                     <div class="row">
@@ -58,7 +58,6 @@
 
                                     @if(auth()->user()->profile_image)
                                         <img class="responsive-img circle z-depth-5" width="200" src="{{ asset('uploads/'. auth()->user()->profile_image) }}" alt="">
-
                                     @else
                                         <img class="responsive-img circle z-depth-5" width="200" src="../../../app-assets/images/user/12.jpg" alt="">
                                     @endif
@@ -67,7 +66,7 @@
                             </div>
                             <div class="row mt-5">
                                 <div class="col s12">
-                                    <h6>Pitched 5 days ago</h6>
+                                    <h6>Pitched {{ $startup->created_at->diffForHumans() }}</h6>
                                 </div>
                             </div>
                             <hr>
@@ -75,7 +74,7 @@
                                 <div class="col s12">
                                     <p class="m-0 "><b>Description</b></p>
                                     <p class="m-0">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur consequatur, debitis dicta ducimus eos, explicabo iste iure magni, mollitia non pariatur placeat repellat reprehenderit repudiandae temporibus ullam veniam voluptatibus!
+                                        {{ $startup->description }}
                                     </p>
                                 </div>
                             </div>
@@ -88,9 +87,9 @@
                                     <div class="card-content card-border-gray">
                                         <div class="row">
                                             <div class="col s12">
-                                                <h5>Startup Name</h5>
-                                                <p>Startup Type </p>
-                                                <p>Startup Category </p>
+                                                <h5>{{ $startup->name }}</h5>
+                                                <p>{{ $startup->type }} </p>
+                                                <p>{{ $startup->category }} </p>
                                             </div>
                                         </div>
                                         <div class="row mt-5">
@@ -102,7 +101,7 @@
                                                                 <div class="row">
 
                                                                     <div class="col s12">
-                                                                        <a href="user-profile-page.html#">
+                                                                        <a href="#">
                                                                             <h6>Pitch Idea</h6>
                                                                         </a>
                                                                         <p class="m-0 amber-text">Capture your investors with a full blown plan.</p>
@@ -111,7 +110,7 @@
                                                                 <hr>
                                                                 <h6 class="font-weight-900 text-uppercase"> Pitch</h6>
                                                                 <p>
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, culpa deserunt ducimus ex expedita iste minus necessitatibus nesciunt nulla optio, porro possimus quasi quidem quo reiciendis rem repellendus, ullam voluptate.
+                                                                    {{ $startup->pitch }}
                                                                 </p>
                                                             </div>
                                                         </div>

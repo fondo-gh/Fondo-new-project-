@@ -31,7 +31,7 @@ Route::post('/profile/skills/add', 'HomeController@addProfileSkills')->name('pro
 
 
 Route::get('/notification', 'HomeController@notification')->name('notification');
-Route::get('/startup', 'HomeController@startup')->name('startup');
+Route::get('/startups', 'HomeController@startups')->name('startup');
 Route::get('/startup/create/page', 'HomeController@getStartupCreatePage')->name('startup.create');
 Route::post('/startup/store', 'HomeController@storeStartup')->name('startup.store');
 Route::get('/startup/{id}/show/page', 'HomeController@getStartupShowPage')->name('startup.show');
