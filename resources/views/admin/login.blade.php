@@ -130,7 +130,7 @@
                         <div class="row margin">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix pt-2">mail_outline</i>
-                                <input id="email" type="email" class="@error('email') invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="@error('email') invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 <label for="email">Email</label>
                                 @error('email')
                                 <span class="red-text" style="text-align: center;"><strong>{{ $message }}</strong></span>

@@ -8,7 +8,7 @@
                 <ul class="navbar-list right">
                     <li class="hide-on-med-and-down"><a class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
                     <li class="hide-on-large-only"><a class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
-                    <li><a class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">5</small></i></a></li>
+                    <li><a class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">{{ auth()->user()->startup_notifications()->count() }}</small></i></a></li>
                     <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online">
 
                                     @if(auth()->user()->profile_image)
@@ -21,12 +21,14 @@
                 <!-- notifications-dropdown-->
                 <ul class="dropdown-content" id="notifications-dropdown">
                     <li>
-                        <h6>NOTIFICATIONS<span class="new badge">5</span></h6>
+                        <h6>NOTIFICATIONS<span class="new badge">{{ auth()->user()->startup_notifications()->count() }}</span></h6>
                     </li>
                     <li class="divider"></li>
-                    <li><a class="grey-text text-darken-2" href="#"><span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
-                        <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+                    @foreach(auth()->user()->startup_notifications as $notification)
+                    <li><a class="grey-text text-darken-2" href="{{ route('notification') }}"><span class="material-icons icon-bg-circle cyan small">widgets</span> An investor has interest in {{ $notification->startup->name }}!</a>
+                        <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">{{ $notification->created_at->diffForHumans() }}</time>
                     </li>
+                    @endforeach
                 </ul>
                 <!-- profile-dropdown-->
                 <ul class="dropdown-content" id="profile-dropdown">

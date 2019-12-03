@@ -130,7 +130,7 @@
         </div>
         </form>
     </div>
-    <!-- Modal Structure Ends --><!-- START RIGHT SIDEBAR NAV -->
+    <!-- Modal Structure Ends -->
 
 @endsection
 

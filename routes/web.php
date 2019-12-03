@@ -53,6 +53,7 @@ Route::get('admin/password/reset', 'Admin\ForgotPasswordController@showLinkReque
 Route::post('admin/password/reset', 'Admin\ResetPasswordController@reset');
 Route::get('admin/password/reset/{token}', 'Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 
-Route::get('investor/startup/{id}/show/page', 'AdminController@getStartupShowPage')->name('investor.startup.show');
+Route::get('/startup/{id}/investor/page', 'AdminController@getStartupShowPage')->name('investor.startup.show');
+Route::post('/startup/{id}/invest', 'AdminController@startupInvest')->name('startup.invest');
 
 

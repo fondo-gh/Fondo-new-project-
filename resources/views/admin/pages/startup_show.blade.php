@@ -2,7 +2,6 @@
 
 
 @section('styles')
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
@@ -11,6 +10,9 @@
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/user-profile-page.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
+
 
     <style>
         #startup-image {
@@ -38,7 +40,7 @@
                     </div>
                     <div class="col s2 m6 l6"><a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="#" data-target="dropdown1"><i class="material-icons hide-on-med-and-up">settings</i><span class="hide-on-small-onl">I want to Invest</span><i class="material-icons right">arrow_drop_down</i></a>
                         <ul class="dropdown-content" id="dropdown1" tabindex="0">
-                            <li tabindex="0"><a class="grey-text text-darken-2" href="#">Invest<span class="badge red">now</span></a></li>
+                            <li tabindex="0"><a class="grey-text text-darken-2 modal-trigger" href="#modal1">Invest<span class="badge red">now</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -219,9 +221,46 @@
         </div>
     </div>
 
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal border-radius-6">
+        <form class="col s12" method="post" action="{{ route('startup.invest', $startup->id) }}">
+            @csrf
+            <div class="modal-content">
+                <h5 class="mt-0">Confirm Investment</h5>
+                <div class="row">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis explicabo quae quam ratione sunt voluptatum! A alias, commodi, fuga fugiat ipsa laborum modi nostrum odio officia repudiandae tenetur veritatis?
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn  waves-effect waves-light mr-2">
+                    <i class="material-icons">check</i> Invest
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Modal Structure Ends -->
+
 @endsection
 
 @section('scripts')
 
+    <!-- BEGIN VENDOR JS-->
+    <script src="{{ asset('app-assets/js/vendors.min.js') }}" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="{{ asset('app-assets/vendors/sortable/jquery-sortable-min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/waypoints/jquery.waypoints.min.js') }}"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN THEME  JS-->
+    <script src="{{ asset('app-assets/js/plugins.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/custom/custom-script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/customizer.js') }}" type="text/javascript"></script>
+    <!-- END THEME  JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="{{ asset('app-assets/js/scripts/app-email.js') }}" type="text/javascript"></script>
 @endsection
 

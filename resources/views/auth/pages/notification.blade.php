@@ -30,16 +30,16 @@
                                 <div class="sidebar-list-padding app-sidebar sidenav" id="email-sidenav">
                                     <ul class="email-list display-grid">
                                         <li class="sidebar-title">Folders</li>
-                                        <li class="active"><a href="app-email.html#!" class="text-sub"><i
+                                        <li class="active"><a href="#!" class="text-sub"><i
                                                     class="material-icons mr-2">today</i> All</a></li>
-                                        <li><a href="app-email.html#!" class="text-sub"><i class="material-icons mr-2">
+                                        <li><a href="#!" class="text-sub"><i class="material-icons mr-2">
                                                     today </i> Today</a></li>
-                                        <li><a href="app-email.html#!" class="text-sub"><i class="material-icons mr-2">
+                                        <li><a href="#!" class="text-sub"><i class="material-icons mr-2">
                                                     today </i> This Month</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="app-email.html#" data-target="email-sidenav"
+                            <a href="#" data-target="email-sidenav"
                                class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
                         </div>
                     </div>
@@ -73,36 +73,37 @@
                                         </div>
                                     </div>
                                     <div class="collection email-collection">
-                                        <a href="app-email-content.html" class="collection-item animate fadeUp delay-1">
-                                            <div class="list-left">
-                                                <label>
-                                                    <input type="checkbox" name="foo"/>
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                            <div class="list-content">
-                                                <div class="list-title-area">
-                                                    <div class="user-media">
-                                                        <img src="{{ asset('app-assets/images/avatar/profile.png') }}" alt=""
-                                                             class="circle z-depth-2 responsive-img avtar">
-                                                        <div class="list-title">Gorge Fernandis</div>
-                                                    </div>
-                                                    <div class="title-right">
 
+                                        @foreach(auth()->user()->startup_notifications as $notification)
+                                            <a href="#" class="collection-item animate fadeUp delay-1">
+                                                <div class="list-left">
+                                                    <label>
+                                                        <input type="checkbox" name="foo"/>
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="list-content">
+                                                    <div class="list-title-area">
+                                                        <div class="user-media">
+                                                            <img src="{{ asset('app-assets/images/avatar/profile.png') }}" alt=""
+                                                                 class="circle z-depth-2 responsive-img avtar">
+                                                            <div class="list-title">{{ $notification->admin->name }}</div>
+                                                        </div>
+                                                        <div class="title-right">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-desc">
+                                                        {{ $notification->admin->name }} has expressed interest in your startup {{ $notification->startup->name }}.
+                                                        You can proceed by contacting your investor.
                                                     </div>
                                                 </div>
-                                                <div class="list-desc">There are many variations of passages of Lorem
-                                                    Ipsum available, but the majority
-                                                    have suffered alteration in some form, by injected humour, or
-                                                    randomised words which don't look even
-                                                    slightly believable. If you are going to use a passage of Lorem
-                                                    Ipsum
+                                                <div class="list-right">
+                                                    <div class="list-date"> {{ $notification->created_at->diffForHumans() }}</div>
                                                 </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <div class="list-date"> 2:03 PM</div>
-                                            </div>
-                                        </a>
+                                            </a>
+
+                                        @endforeach
 
                                     </div>
                                 </div>
@@ -110,49 +111,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Content Area Ends -->
-
-                <!-- Add new email popup -->
-                <div style="bottom: 54px; right: 19px;" class="fixed-action-btn direction-top">
-                    <a class="btn-floating btn-large primary-text gradient-shadow modal-trigger"
-                       href="#modal1">
-                        <i class="material-icons">add</i>
-                    </a>
-                </div>
-                <!-- Add new email popup Ends-->
-
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal border-radius-6">
-                    <div class="modal-content">
-                        <h5 class="mt-0">New Message</h5>
-                        <hr>
-                        <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="material-icons prefix"> person_outline </i>
-                                        <input id="email" type="email" class="validate">
-                                        <label for="email">Recipients</label>
-                                    </div>
-                                    <div class="input-field col s12">
-                                        <i class="material-icons prefix"> title </i>
-                                        <input id="subject" type="text" class="validate">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                    <div class="input-field col s12">
-                                        <textarea id="editor">Message</textarea>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a class="btn modal-close waves-effect waves-light mr-2">
-                            <i class="material-icons">send</i> Send
-                        </a>
-                    </div>
-                </div>
-                <!-- Modal Structure Ends --><!-- START RIGHT SIDEBAR NAV -->
             </div>
         </div>
     </div>

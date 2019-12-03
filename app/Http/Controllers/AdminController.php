@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Notification;
 use App\Startup;
 use Illuminate\Http\Request;
 
@@ -37,5 +38,24 @@ class AdminController extends Controller
     public function getStartupShowPage($id) {
         $startup = Startup::find($id);
         return view('admin.pages.startup_show')->withStartup($startup);
+    }
+
+    /**
+     * Invest in startup. Store notification
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function startupInvest(Request $request, $id) {
+        Notification::create(
+            [
+                'admin_id' => auth()->user()->id,
+                'startup_id' => $id,
+                'user_id' => Startup::find($id)->user->id
+            ]
+        );
+
+        session()->flash("success", "Your request has been successfully. You will be contacted by Fondo shortly.");
+        return back();
     }
 }

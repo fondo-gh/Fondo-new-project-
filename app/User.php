@@ -52,4 +52,13 @@ class User extends Authenticatable
     public function startups() {
         return $this->hasMany(Startup::class);
     }
+
+
+    /**
+     * User has many startup notification
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function startup_notifications() {
+        return $this->hasMany(Notification::class);
+    }
 }
