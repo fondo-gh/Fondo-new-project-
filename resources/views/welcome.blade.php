@@ -28,7 +28,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css') }}">
     <!-- END: Custom CSS-->
 
-
     <style type="text/css">
         body {
             background-image: url( '{{ asset("app-assets/background/background-h.jpg") }}' );

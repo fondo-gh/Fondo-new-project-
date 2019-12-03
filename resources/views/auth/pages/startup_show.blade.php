@@ -92,7 +92,33 @@
                                                 <p>{{ $startup->category }} </p>
                                             </div>
                                         </div>
-                                        <div class="row mt-5">
+                                        <div class="row mt-1">
+                                            <div class="col s12">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <div class="card card-border z-depth-2">
+                                                            <div class="card-content">
+                                                                <div class="row">
+
+                                                                    <div class="col s12">
+                                                                        <a href="#">
+                                                                            <h6>Brief Financial Statement</h6>
+                                                                            <p>Costs are in GHC</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <p>Research and Development Cost: {{ $startup->research_cost }}</p>
+                                                                <p>Administration Cost: {{ $startup->administration_cost }}</p>
+                                                                <p>Marketing Cost: {{ $startup->marketing_cost }}</p>
+                                                                <p>Profit : {{ $startup->profit }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
                                             <div class="col s12">
                                                 <div class="row">
                                                     <div class="col s12">
@@ -159,7 +185,9 @@
                                                         <div class="collapsible-header"><i class="material-icons">adjust</i> Financials</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                {{ $startup->financials }}
+                                                                @if($startup->financials)
+                                                                    <a href="{{ asset('uploads/'.  $startup->financials  ) }}" target=_blank">Financial Model File</a>
+                                                                @endif
                                                             </p>
                                                         </div>
                                                     </li>
@@ -191,7 +219,9 @@
                                                         <div class="collapsible-header"><i class="material-icons">adjust</i> Business Model</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                {{ $startup->business_model }}
+                                                                @if($startup->business_model)
+                                                                    <a href="{{ asset('uploads/'.  $startup->business_model  ) }}" target=_blank">Business Model File</a>
+                                                                @endif
                                                             </p>
                                                         </div>
                                                     </li>

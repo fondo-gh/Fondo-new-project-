@@ -22,6 +22,12 @@ class CreateStartupsTable extends Migration
             $table->string('type');
             $table->string('category');
             $table->text('pitch');
+
+            $table->string('research_cost');
+            $table->string('administration_cost');
+            $table->string('marketing_cost');
+            $table->string('profit');
+
             $table->text('key_resources')->nullable();
             $table->text('value_proposition')->nullable();
             $table->text('revenue_model')->nullable();

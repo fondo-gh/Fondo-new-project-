@@ -11,7 +11,8 @@ class Startup extends Model
      */
     protected $fillable = [
         'user_id','name', 'description', 'image', 'type', 'category', 'pitch', 'key_resources', 'value_proposition', 'revenue_model',
-        'cost_structure', 'financials', 'customer_target', 'sale_channels', 'key_metrics', 'business_model'
+        'cost_structure', 'financials', 'customer_target', 'sale_channels', 'key_metrics', 'business_model',
+        'research_cost', 'administration_cost', 'marketing_cost', 'profit'
     ];
 
 

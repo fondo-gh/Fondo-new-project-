@@ -113,6 +113,27 @@
                                                             <textarea name="description" id="desc" rows="4"  class="materialize-textarea" required>{{ old('description') }}</textarea>
                                                         </div>
                                                     </div>
+                                                    <div class="row mt-4">
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="proposal1">Research & Development Cost (Ghc) <span class="red-text">*</span></label>
+                                                            <input type="number" step="0.01" class="validate" id="proposal1" name="research_cost" value="{{ old('research_cost') }}" required>
+                                                        </div>
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="proposal1">Marketing Cost (Ghc)<span class="red-text">*</span></label>
+                                                            <input type="number" step="0.01" class="validate" id="proposal1" name="marketing_cost" value="{{ old('marketing_cost') }}" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-4">
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="proposal1">Administration Cost (Ghc)<span class="red-text">*</span></label>
+                                                            <input type="number" step="0.01" class="validate" id="proposal1" name="administration_cost" value="{{ old('administration_cost') }}" required>
+                                                        </div>
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="proposal1">Profit (Ghc)<span class="red-text">*</span></label>
+                                                            <input type="number" step="0.01" class="validate" id="proposal1" name="profit" value="{{ old('profit') }}" required>
+                                                        </div>
+                                                    </div>
 
                                                     <div class="step-actions">
                                                         <div class="row">

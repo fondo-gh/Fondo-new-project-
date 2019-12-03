@@ -1,19 +1,19 @@
 @extends('layouts.user')
 @section('styles')
     <!-- BEGIN: VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css) }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/flag-icon/css/flag-icon.min.css) }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/materialize-stepper/materialize-stepper.min.css) }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/dropify/css/dropify.min.css) }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/flag-icon/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/materialize-stepper/materialize-stepper.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/dropify/css/dropify.min.css') }}">
 
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css) }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css) }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/form-wizard.css) }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/form-wizard.css') }}">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css) }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css') }}">
     <!-- END: Custom CSS-->
 @endsection
 @section('content')
@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col s12">
                             <div class="card">
-                                <form method="post" action="{{ route('startup.update', $startup->id) }}">
+                                <form method="post" enctype="multipart/form-data" action="{{ route('startup.update', $startup->id) }}">
                                     @csrf
                                     <div class="card-content">
                                         <div class="card-header">
@@ -191,10 +191,15 @@
                                                 <div class="step-title waves-effect">Financials</div>
                                                 <div class="step-content">
 
-                                                    <div class="row">
-                                                        <div class="input-field col m12 s12">
-                                                            <label for="desc">Financials</label>
-                                                            <textarea name="financials" id="desc" rows="8" cols="5" class="materialize-textarea">{{ $startup->financials }}</textarea>
+{{--                                                    <div class="row">--}}
+{{--                                                        <div class="input-field col m12 s12">--}}
+{{--                                                            <label for="desc">Financials</label>--}}
+{{--                                                            <textarea name="financials" id="desc" rows="8" cols="5" class="materialize-textarea">{{ $startup->financials }}</textarea>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+                                                    <div class="row mt-4">
+                                                        <div class="col s12 m12 l12">
+                                                            <input type="file" id="input-file-now" name="financial_file" required class="dropify" data-default-file=""/>
                                                         </div>
                                                     </div>
 
@@ -336,10 +341,16 @@
                                             <li class="step">
                                                 <div class="step-title waves-effect">Business Model</div>
                                                 <div class="step-content">
-                                                    <div class="row">
-                                                        <div class="input-field col m12 s12">
-                                                            <label for="desc">Business Model</label>
-                                                            <textarea name="business_model" id="desc" rows="8" cols="5" class="materialize-textarea">{{ $startup->business_model }}</textarea>
+{{--                                                    <div class="row">--}}
+{{--                                                        <div class="input-field col m12 s12">--}}
+{{--                                                            <label for="desc">Business Model</label>--}}
+{{--                                                            <textarea name="business_model" id="desc" rows="8" cols="5" class="materialize-textarea">{{ $startup->business_model }}</textarea>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+
+                                                    <div class="row mt-4">
+                                                        <div class="col s12 m12 l12">
+                                                            <input type="file" id="input-file-now" name="business_model_file" required class="dropify" data-default-file=""/>
                                                         </div>
                                                     </div>
 
@@ -390,24 +401,24 @@
 
 @section('scripts')
     <!-- BEGIN VENDOR JS-->
-    <script src="{{ asset('app-assets/js/vendors.min.js) }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/vendors.min.js') }}" type="text/javascript"></script>
 
-    <script src="{{ asset('app-assets/vendors/dropify/js/dropify.min.js) }}"></script>
+    <script src="{{ asset('app-assets/vendors/dropify/js/dropify.min.js') }}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="{{ asset('app-assets/js/scripts/form-file-uploads.js) }}"></script>
+    <script src="{{ asset('app-assets/js/scripts/form-file-uploads.js') }}"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="{{ asset('app-assets/vendors/materialize-stepper/materialize-stepper.min.js) }}"></script>
+    <script src="{{ asset('app-assets/vendors/materialize-stepper/materialize-stepper.min.js') }}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
-    <script src="{{ asset('app-assets/js/plugins.js) }}" type="text/javascript"></script>
-    <script src="{{ asset('app-assets/js/custom/custom-script.js) }}" type="text/javascript"></script>
-    <script src="{{ asset('app-assets/js/scripts/customizer.js) }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/plugins.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/custom/custom-script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/customizer.js') }}" type="text/javascript"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="{{ asset('app-assets/js/scripts/form-wizard.js) }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/form-wizard.js') }}" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS-->
 @endsection
 

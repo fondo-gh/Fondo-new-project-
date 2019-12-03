@@ -152,6 +152,10 @@ class HomeController extends Controller
             'type' => 'required|string',
             'category' => 'required|string',
             'pitch' => 'required|string',
+            'research_cost' => 'required|numeric',
+            'marketing_cost' => 'required|numeric',
+            'administration_cost' => 'required|numeric',
+            'profit' => 'required|numeric',
         ]);
 
         //store the image
@@ -182,12 +186,36 @@ class HomeController extends Controller
     }
 
     /**
-     * Update the startup details
+     *Update the startup details
      * @param Request $request
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function updateStartup(Request $request, $id) {
+
+        $this->validate($request, [
+            'financial_file' => 'nullable|image',
+            'business_model_file' => 'nullable|image',
+        ]);
+
+        //store the financial file
+        if($request->hasFile('financial_file')) {
+            $filename = date('Y-m-d-H:i:s') . "." . $request->file('financial_file')->getClientOriginalExtension();
+            $path = $request->file('financial_file')->storeAs('startups', $filename, 'custom');
+            //attach path to request
+            $request['financials'] = $path;
+        }
+
+
+        //store the business model file
+        if($request->hasFile('business_model_file')) {
+            $filename = date('Y-m-d-H:i:s') . "." . $request->file('business_model_file')->getClientOriginalExtension();
+            $path = $request->file('business_model_file')->storeAs('startups', $filename, 'custom');
+            //attach path to request
+            $request['business_model'] = $path;
+        }
+
         //find startup
         $startup = Startup::find($id);
         //update startup
