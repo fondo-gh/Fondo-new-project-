@@ -1,19 +1,19 @@
 @extends('layouts.user')
 @section('styles')
     <!-- BEGIN: VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/flag-icon/css/flag-icon.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/materialize-stepper/materialize-stepper.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/dropify/css/dropify.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/flag-icon/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/materialize-stepper/materialize-stepper.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/dropify/css/dropify.min.css') }}">
 
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/form-wizard.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/form-wizard.css') }}">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/custom/custom.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css') }}">
     <!-- END: Custom CSS-->
 @endsection
 
@@ -152,24 +152,24 @@
 
 @section('scripts')
     <!-- BEGIN VENDOR JS-->
-    <script src="../../../app-assets/js/vendors.min.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/vendors.min.js') }}" type="text/javascript"></script>
 
-    <script src="../../../app-assets/vendors/dropify/js/dropify.min.js"></script>
+    <script src="{{ asset('app-assets/vendors/dropify/js/dropify.min.js') }}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/form-file-uploads.js"></script>
+    <script src="{{ asset('app-assets/js/scripts/form-file-uploads.js') }}"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="../../../app-assets/vendors/materialize-stepper/materialize-stepper.min.js"></script>
+    <script src="{{ asset('app-assets/vendors/materialize-stepper/materialize-stepper.min.js') }}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
-    <script src="../../../app-assets/js/plugins.js" type="text/javascript"></script>
-    <script src="../../../app-assets/js/custom/custom-script.js" type="text/javascript"></script>
-    <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/plugins.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/custom/custom-script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/customizer.js') }}" type="text/javascript"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/form-wizard.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/form-wizard.js') }}" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS-->
 @endsection
 

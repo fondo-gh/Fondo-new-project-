@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0488fde-f129-4d35-af04-fa0728d4507a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/startup_show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/headers/_admin_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/headers/_admin_side_nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/app-assets/images/avatar/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/scripts/_scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/scripts/_scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/styles/_styles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/styles/_styles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/startup_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/startup_show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/notification.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/profile_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/profile_update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startup_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startup_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startup_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startup_show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startup_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startup_update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startups.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startups.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/headers/_admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/headers/_admin_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/headers/_user_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/headers/_user_header.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,17 +140,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/app-assets/images/avatar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/app-assets/images/avatar" />
       <recent name="$PROJECT_DIR$/resources/views/admin/pages" />
       <recent name="$PROJECT_DIR$/public/app-assets/background" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -177,7 +182,8 @@
       <option name="presentableId" value="Default" />
       <updated>1575216078983</updated>
       <workItem from="1575216080199" duration="26460000" />
-      <workItem from="1575348296557" duration="8132000" />
+      <workItem from="1575348296557" duration="9243000" />
+      <workItem from="1575400406476" duration="1967000" />
     </task>
     <servers />
   </component>

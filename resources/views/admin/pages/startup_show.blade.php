@@ -59,7 +59,7 @@
                                     @if($startup->user->profile_image)
                                         <img class="responsive-img circle z-depth-5" width="200" src="{{ asset('uploads/'. $startup->user->profile_image) }}" alt="">
                                     @else
-                                        <img class="responsive-img circle z-depth-5" width="200" src="{{ asset('app-assets/images/user/12.jpg') }}" alt="">
+                                        <img class="responsive-img circle z-depth-5" width="200" src="{{ asset('app-assets/images/avatar/profile.png') }}" alt="">
                                     @endif
                                     <br>
                                 </div>

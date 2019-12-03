@@ -2,15 +2,15 @@
 
 
 @section('styles')
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/user-profile-page.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/user-profile-page.css') }}">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/custom/custom.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css') }}">
 
     <style>
         #startup-image {
@@ -59,7 +59,7 @@
                                     @if(auth()->user()->profile_image)
                                         <img class="responsive-img circle z-depth-5" width="200" src="{{ asset('uploads/'. auth()->user()->profile_image) }}" alt="">
                                     @else
-                                        <img class="responsive-img circle z-depth-5" width="200" src="../../../app-assets/images/user/12.jpg" alt="">
+                                        <img class="responsive-img circle z-depth-5" width="200" src="{{ asset('app-assets/images/avatar/profile.png') }}" alt="">
                                     @endif
                                     <br>
                                 </div>
@@ -198,9 +198,6 @@
                                                 </ul>
                                             </div>
                                         </div>
-
-
-
                                     </div>
                                 </div>
                             </div>

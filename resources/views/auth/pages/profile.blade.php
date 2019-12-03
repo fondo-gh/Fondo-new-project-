@@ -4,11 +4,11 @@
 @section('styles')
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css"
-          href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
+          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
     <link rel="stylesheet" type="text/css"
-          href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-email.css">
+          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-sidebar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-email.css') }}">
 @endsection
 
 @section('content')
@@ -61,7 +61,7 @@
                                              alt="Profile Image"/>
                                     @else
                                         <img class="responsive-img border-radius-8 z-depth-4 image-n-margin"
-                                             src="../../../app-assets/images/cards/news-fashion.jpg"
+                                             src="{{ asset('app-assets/images/avatar/profile.png') }}"
                                              alt="Profile Image"/>
                                     @endif
                                     <div class="card-content">
@@ -104,14 +104,12 @@
                     </div>
                 </div>
                 <div class="divider mt-8"></div>
-
             </div>
         </div>
     </div>
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal border-radius-6">
-
         <form class="col s12" method="post" action="{{ route('profile.skills.add') }}">
             @csrf
         <div class="modal-content">
@@ -139,19 +137,19 @@
 @section('scripts')
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
-    <script src="../../../app-assets/js/vendors.min.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/vendors.min.js') }}" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="../../../app-assets/vendors/sortable/jquery-sortable-min.js"></script>
-    <script src="../../../app-assets/vendors/tinymce/tinymce.min.js"></script>
-    <script src="../../../app-assets/vendors/waypoints/jquery.waypoints.min.js"></script>
+    <script src="{{ asset('app-assets/vendors/sortable/jquery-sortable-min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/waypoints/jquery.waypoints.min.js') }}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
-    <script src="../../../app-assets/js/plugins.js" type="text/javascript"></script>
-    <script src="../../../app-assets/js/custom/custom-script.js" type="text/javascript"></script>
-    <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/plugins.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/custom/custom-script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/customizer.js') }}" type="text/javascript"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/app-email.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/app-email.js') }}" type="text/javascript"></script>
 @endsection
 

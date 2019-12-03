@@ -3,11 +3,11 @@
 @section('styles')
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css"
-          href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
+          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
     <link rel="stylesheet" type="text/css"
-          href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-email.css">
+          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-sidebar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-email.css') }}">
 @endsection
 
 @section('content')
@@ -83,7 +83,7 @@
                                             <div class="list-content">
                                                 <div class="list-title-area">
                                                     <div class="user-media">
-                                                        <img src="../../../app-assets/images/user/2.jpg" alt=""
+                                                        <img src="{{ asset('app-assets/images/avatar/profile.png') }}" alt=""
                                                              class="circle z-depth-2 responsive-img avtar">
                                                         <div class="list-title">Gorge Fernandis</div>
                                                     </div>
@@ -161,19 +161,19 @@
 @section('scripts')
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
-    <script src="../../../app-assets/js/vendors.min.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/vendors.min.js') }}" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="../../../app-assets/vendors/sortable/jquery-sortable-min.js"></script>
-    <script src="../../../app-assets/vendors/tinymce/tinymce.min.js"></script>
-    <script src="../../../app-assets/vendors/waypoints/jquery.waypoints.min.js"></script>
+    <script src="{{ asset('app-assets/vendors/sortable/jquery-sortable-min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/waypoints/jquery.waypoints.min.js') }}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
-    <script src="../../../app-assets/js/plugins.js" type="text/javascript"></script>
-    <script src="../../../app-assets/js/custom/custom-script.js" type="text/javascript"></script>
-    <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/plugins.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/custom/custom-script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/customizer.js') }}" type="text/javascript"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/app-email.js" type="text/javascript"></script>
+    <script src="{{ asset('app-assets/js/scripts/app-email.js') }}" type="text/javascript"></script>
 @endsection
 

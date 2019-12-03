@@ -14,7 +14,7 @@
                                     @if(auth()->user()->profile_image)
                                     <img src="{{ asset('uploads/'. auth()->user()->profile_image) }}" alt="avatar">
                                 @else
-                                    <img src="{{ asset('app-assets/images/avatar/avatar-7.png') }}" alt="avatar">
+                                    <img src="{{ asset('app-assets/images/avatar/profile.png') }}" alt="avatar">
                                 @endif
                                 <i></i></span></a></li>
                 </ul>

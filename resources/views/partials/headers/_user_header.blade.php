@@ -14,7 +14,7 @@
                                     @if(auth()->user()->profile_image)
                                     <img src="{{ asset('uploads/'. auth()->user()->profile_image) }}" alt="avatar">
                                 @else
-                                    <img src="../../../app-assets/images/avatar/avatar-7.png" alt="avatar">
+                                    <img src="{{ asset('pp-assets/images/avatar/profile.png') }}a" alt="avatar">
                                 @endif
                                 <i></i></span></a></li>
                 </ul>
@@ -24,7 +24,7 @@
                         <h6>NOTIFICATIONS<span class="new badge">5</span></h6>
                     </li>
                     <li class="divider"></li>
-                    <li><a class="grey-text text-darken-2" href="cards-extended.html#!"><span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
+                    <li><a class="grey-text text-darken-2" href="#"><span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
                         <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
                     </li>
                 </ul>
