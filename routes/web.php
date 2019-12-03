@@ -35,6 +35,10 @@ Route::get('/startups', 'HomeController@startups')->name('startup');
 Route::get('/startup/create/page', 'HomeController@getStartupCreatePage')->name('startup.create');
 Route::post('/startup/store', 'HomeController@storeStartup')->name('startup.store');
 Route::get('/startup/{id}/show/page', 'HomeController@getStartupShowPage')->name('startup.show');
+Route::get('/startup/{id}/update/page', 'HomeController@getStartupUpdatePage')->name('startup.update.page');
+Route::post('/startup/{id}/update', 'HomeController@updateStartup')->name('startup.update');
+
+
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 
 

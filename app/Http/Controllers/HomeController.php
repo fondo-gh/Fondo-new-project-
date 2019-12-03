@@ -169,6 +169,31 @@ class HomeController extends Controller
         return redirect()->route('startup.show', $startup->id);
     }
 
+    /**
+     * Returns page to update startup
+     * @param $id
+     * @return mixed
+     */
+    public function getStartupUpdatePage($id) {
+        $startup = Startup::find($id);
+        return view('auth.pages.startup_update')->withStartup($startup);
+    }
+
+    /**
+     * Update the startup details
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateStartup(Request $request, $id) {
+        //find startup
+        $startup = Startup::find($id);
+        //update startup
+        $startup->update($request->all());
+
+        session()->flash('success', 'Startup details updated successfully.');
+        return redirect()->route('startup.show', $startup->id);
+    }
 
 
 

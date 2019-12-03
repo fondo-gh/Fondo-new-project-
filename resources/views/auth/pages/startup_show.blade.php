@@ -38,7 +38,7 @@
                     </div>
                     <div class="col s2 m6 l6"><a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="user-profile-page.html#!" data-target="dropdown1"><i class="material-icons hide-on-med-and-up">settings</i><span class="hide-on-small-onl">Options</span><i class="material-icons right">arrow_drop_down</i></a>
                         <ul class="dropdown-content" id="dropdown1" tabindex="0">
-                            <li tabindex="0"><a class="grey-text text-darken-2" href="#">Update Startup Info<span class="new badge red">9</span></a></li>
+                            <li tabindex="0"><a class="grey-text text-darken-2" href="{{ route('startup.update.page', $startup->id) }}">Update Startup Info<span class="new badge red">9</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -123,33 +123,18 @@
                                             <div class="col s12">
                                                 <ul class="collapsible popout" data-collapsible="accordion">
                                                     <li>
-                                                        <div class="collapsible-header"><i class="material-icons">mic_none</i> Key Resources</div>
+                                                        <div class="collapsible-header"><i class="material-icons">adjust</i> Key Resources</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                                et
-                                                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                aliquip
-                                                                ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                                tempor
-                                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                                ullamco
-                                                                laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                                quis
-                                                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                {{ $startup->key_resources }}
                                                             </p>
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        <div class="collapsible-header"><i class="material-icons">cloud_queue</i> Value Proposition</div>
+                                                        <div class="collapsible-header"><i class="material-icons">adjust</i> Value Proposition</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                                et
-                                                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                aliquip
-                                                                ex ea commodo consequat.
+                                                             {{ $startup->value_proposition }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -157,11 +142,7 @@
                                                         <div class="collapsible-header"><i class="material-icons">adjust</i> Revenue Model</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                                et
-                                                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                aliquip
-                                                                ex ea commodo consequat.
+                                                                {{ $startup->revenue_model }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -170,11 +151,7 @@
                                                         <div class="collapsible-header"><i class="material-icons">adjust</i> Cost Structure</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                                et
-                                                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                aliquip
-                                                                ex ea commodo consequat.
+                                                                {{ $startup->cost_structure }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -182,11 +159,39 @@
                                                         <div class="collapsible-header"><i class="material-icons">adjust</i> Financials</div>
                                                         <div class="collapsible-body">
                                                             <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                                et
-                                                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                aliquip
-                                                                ex ea commodo consequat.
+                                                                {{ $startup->financials }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">adjust</i> Customer Target</div>
+                                                        <div class="collapsible-body">
+                                                            <p>
+                                                                {{ $startup->customer_target }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">adjust</i> Sale Channels</div>
+                                                        <div class="collapsible-body">
+                                                            <p>
+                                                                {{ $startup->sale_channels }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">adjust</i> Key Metrics</div>
+                                                        <div class="collapsible-body">
+                                                            <p>
+                                                                {{ $startup->key_metrics }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">adjust</i> Business Model</div>
+                                                        <div class="collapsible-body">
+                                                            <p>
+                                                                {{ $startup->business_model }}
                                                             </p>
                                                         </div>
                                                     </li>
