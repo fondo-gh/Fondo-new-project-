@@ -39,10 +39,9 @@ Route::get('/startup/{id}/update/page', 'HomeController@getStartupUpdatePage')->
 Route::post('/startup/{id}/update', 'HomeController@updateStartup')->name('startup.update');
 
 
+/*Admin routes*/
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 
-
-/*Admin routes*/
 /* Admin Routes for Authentication*/
 Route::get('admin/login', 'Admin\LoginController@showLoginForm')->name('admin.login');
 Route::post('admin/login', 'Admin\LoginController@login')->name('admin.login');
@@ -53,4 +52,7 @@ Route::post('admin/password/email', 'Admin\ForgotPasswordController@sendResetLin
 Route::get('admin/password/reset', 'Admin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
 Route::post('admin/password/reset', 'Admin\ResetPasswordController@reset');
 Route::get('admin/password/reset/{token}', 'Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
+
+Route::get('investor/startup/{id}/show/page', 'AdminController@getStartupShowPage')->name('investor.startup.show');
+
 

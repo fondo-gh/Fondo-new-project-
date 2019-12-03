@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Startup;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -23,6 +24,18 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $startups = Startup::all();
+        return view('admin.pages.dashboard')->withStartups($startups);
+    }
+
+    /**
+     * Returns page to display the details of the startup
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @param $id
+     * @return mixed
+     */
+    public function getStartupShowPage($id) {
+        $startup = Startup::find($id);
+        return view('admin.pages.startup_show')->withStartup($startup);
     }
 }

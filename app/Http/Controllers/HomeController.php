@@ -122,6 +122,8 @@ class HomeController extends Controller
     /**
      * Returns page to display the details of the startup
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @param $id
+     * @return mixed
      */
     public function getStartupShowPage($id) {
         $startup = Startup::find($id);
