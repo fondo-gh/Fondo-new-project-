@@ -68,16 +68,18 @@ class HomeController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
     public function updateProfile(Request $request) {
+
+        //find the current user
+        $user = User::find(auth()->id());
+
         $this->validate($request, [
             'name' => 'required|string',
             'image' => 'nullable|image',
             'residence' => 'required|string',
-            'contact_number' => 'required|digits_between:10,14',
-            'account_number' => 'required|digits_between:10,14',
+            'contact_number' => 'required|digits_between:10,14|unique:users,contact_number,' . $user->id,
+            'account_number' => 'required|digits_between:10,14|unique:users,account_number,' . $user->id,
         ]);
 
-        //find the current user
-        $user = User::find(auth()->id());
 
         if($request->hasFile('image')) {
             $filename = date('Y-m-d-H:i:s') . "." . $request->file('image')->getClientOriginalExtension();
@@ -195,8 +197,8 @@ class HomeController extends Controller
     public function updateStartup(Request $request, $id) {
 
         $this->validate($request, [
-            'financial_file' => 'nullable|image',
-            'business_model_file' => 'nullable|image',
+            'financial_file' => 'nullable|file',
+            'business_model_file' => 'nullable|file',
         ]);
 
         //store the financial file
