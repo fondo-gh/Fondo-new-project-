@@ -20,6 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 //auth routes
 Auth::routes();
 

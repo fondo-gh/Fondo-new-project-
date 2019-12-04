@@ -1,0 +1,34 @@
+API Endpoint: https://ussouthcentral.services.azureml.net/workspaces/dfd5114aadc74affb113e74728aa3b0f/services/db4898c420bf40419b0ca129c0284eb5/execute?api-version=2.0&format=swagger
+Authorization Key: 76dNq2NOBqVcYVrVXTezvsTW6ITWpZ6WZe3MLFQmvkDYg5lzJ0BwwzBknCnyXHutsmcf8xmX0AX2Eo38QLYN0g==
+Request Body: 
+{
+  "Inputs": {
+    "input1": [
+      {
+        "R&D Spend": 100000,
+        "Administration": 10000,
+        "Marketing Spend": 5000,
+        "Profit": 250000
+      }
+    ]
+  },
+  "GlobalParameters": {}
+}
+
+Response:
+{
+    "Results": {
+        "output1": [
+            {
+                "Scored Labels": "1",
+                "Scored Probabilities": "0.625"
+            }
+        ]
+    }
+}
+
+STEPS 
+-----
+1. Make an "POST" API call to the Endpoint provided passing a Bearer Token using the Key provided and ensure to pass the body in the format above.
+2. you will get a response object as shown above. 
+3. Use response anyhow in your front end;
