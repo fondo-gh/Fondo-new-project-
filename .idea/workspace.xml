@@ -2,116 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0488fde-f129-4d35-af04-fa0728d4507a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/fondoApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fondoApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Startup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Startup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_03_052658_create_startups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_03_052658_create_startups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/avatar/avatar-9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/camara.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/cameras.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/headphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/headphones-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/headphones.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/horizontal-news-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/horizontal-news-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/iphone-x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/iphonec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/magic-mouse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/news-apple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/news-fashion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/news-twitter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/nike.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/oneplus-6t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/powerbank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/puma.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/reebok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/remote.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/shoes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/smartspeakers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/speakers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/watch-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/cards/watch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/44.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/46.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/47.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/48.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/gallery/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-assets/images/user/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/startups/2019-12-03-05:48:30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/startups/2019-12-03-05:51:11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/startups/2019-12-03-05:52:06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/startup_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/startup_show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startup_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startup_create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startup_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startup_show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/pages/startup_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/pages/startup_update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,6 +137,11 @@
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UO835IEyMRd7ewiszL2zjjShTj" />
@@ -291,7 +194,7 @@
       <updated>1575216078983</updated>
       <workItem from="1575216080199" duration="26460000" />
       <workItem from="1575348296557" duration="9243000" />
-      <workItem from="1575400406476" duration="9720000" />
+      <workItem from="1575400406476" duration="17125000" />
     </task>
     <servers />
   </component>

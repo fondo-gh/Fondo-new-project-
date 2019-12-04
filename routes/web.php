@@ -56,4 +56,4 @@ Route::get('admin/password/reset/{token}', 'Admin\ResetPasswordController@showRe
 Route::get('/startup/{id}/investor/page', 'AdminController@getStartupShowPage')->name('investor.startup.show');
 Route::post('/startup/{id}/invest', 'AdminController@startupInvest')->name('startup.invest');
 
-
+Route::post('/startup/prediction', 'AdminController@getPrediction')->name('startup.prediction');

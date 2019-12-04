@@ -111,19 +111,25 @@
                                                         <div class="card card-border z-depth-2">
                                                             <div class="card-content">
                                                                 <div class="row">
+                                                                    <div class="progress" id="progress-bar">
+                                                                        <div class="indeterminate"></div>
+                                                                    </div>
 
-                                                                    <div class="col s12">
+                                                                    <div class="col s6">
                                                                         <a href="#">
                                                                             <h6>Brief Financial Statement</h6>
-                                                                            <p>Costs are in GHC</p>
+                                                                            <small>* Costs are in GHC</small>
                                                                         </a>
+                                                                    </div>
+                                                                    <div class="col s6">
+                                                                        <button class="btn btn-small" href="#" id="prediction-btn">Run Prediction</button>
                                                                     </div>
                                                                 </div>
                                                                 <hr>
-                                                                <p>Research and Development Cost: {{ $startup->research_cost }}</p>
-                                                                <p>Administration Cost: {{ $startup->administration_cost }}</p>
-                                                                <p>Marketing Cost: {{ $startup->marketing_cost }}</p>
-                                                                <p>Profit : {{ $startup->profit }}</p>
+                                                                <p>Research and Development Cost: <b>{{ $startup->research_cost }}</b></p>
+                                                                <p>Administration Cost: <b>{{ $startup->administration_cost }}</b></p>
+                                                                <p>Marketing Cost: <b>{{ $startup->marketing_cost }}</b></p>
+                                                                <p>Profit : <b>{{ $startup->profit }}</b></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -292,5 +298,60 @@
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="{{ asset('app-assets/js/scripts/app-email.js') }}" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            //runs prediction from ai
+            function runPrediction() {
+                //get the startup id and token
+                let startupId = '{{ $startup->id }}';
+                let token = '{{ csrf_token() }}';
+                //prepare the body
+                let body = {
+                    '_token' : token,
+                    'id' : startupId
+                };
+                //make api call
+                $.post('{{ route('startup.prediction') }}', body).done(result => {
+                    console.log("result", result);
+                    result = JSON.parse(result);
+                    console.log("parsed", result);
+                    console.log(result['data']['Results']['output1'][0]);
+
+                    let data = result['data']['Results']['output1'][0];
+                    let label = data['Scored Labels'];
+                    let probability = data['Scored Probabilities'];
+                    probability = Number.parseFloat(probability);
+
+                    $('#progress-bar').hide();
+
+                    console.log(probability);
+                    if(probability < 0.5) {
+                        swal("Prediction Result", "Probability rate is " + probability + " Startup is not viable for investment.", "info");
+                    } else {
+                        swal("Prediction Result", "Probability rate is " + probability + " Startup is viable for investment.", "success");
+                    }
+
+                }).fail(error => {
+                    console.log("error", error);
+                    $('#progress-bar').hide();
+                    swal("Error", error, "error");
+
+                });
+            }
+
+            //hide progress bar
+            $('#progress-bar').hide();
+
+            $("#prediction-btn").on('click', function (event) {
+                event.preventDefault();
+
+                $('#progress-bar').show();
+                runPrediction();
+            });
+
+
+        });
+    </script>
 @endsection
 
