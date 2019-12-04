@@ -301,7 +301,9 @@
 
     <script>
         $(document).ready(function () {
-            //runs prediction from ai
+            /**
+             * runs prediction from ai
+             */
             function runPrediction() {
                 //get the startup id and token
                 let startupId = '{{ $startup->id }}';
@@ -343,9 +345,9 @@
             //hide progress bar
             $('#progress-bar').hide();
 
+            //listens to the prediction event click
             $("#prediction-btn").on('click', function (event) {
                 event.preventDefault();
-
                 $('#progress-bar').show();
                 runPrediction();
             });

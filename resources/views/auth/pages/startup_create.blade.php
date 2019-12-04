@@ -53,14 +53,10 @@
                                 <form method="post" enctype="multipart/form-data" action="{{ route('startup.store') }}">
                                     @csrf
                                     <div class="card-content">
-                                        <div class="card-header">
-                                            <h4 class="card-title">Linear Stepper</h4>
-                                        </div>
                                         <ul class="stepper linear" id="linearStepper">
                                             <li class="step active">
                                                 <div class="step-title waves-effect">Upload Startup Picture</div>
                                                 <div class="step-content">
-
                                                     <div class="row mt-4">
                                                         <div class="col s12 m12 l12">
                                                             <input type="file" id="input-file-now" name="file" required class="dropify" data-default-file=""/>
