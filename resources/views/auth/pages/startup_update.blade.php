@@ -51,9 +51,6 @@
                                 <form method="post" enctype="multipart/form-data" action="{{ route('startup.update', $startup->id) }}">
                                     @csrf
                                     <div class="card-content">
-                                        <div class="card-header">
-                                            <h4 class="card-title">Linear Stepper</h4>
-                                        </div>
                                         <ul class="stepper linear" id="linearStepper">
                                             <li class="step active">
                                                 <div class="step-title waves-effect">Key Resources</div>
