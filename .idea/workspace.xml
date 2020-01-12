@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0488fde-f129-4d35-af04-fa0728d4507a" name="Default Changelist" comment="" />
+    <list default="true" id="b0488fde-f129-4d35-af04-fa0728d4507a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +195,7 @@
       <workItem from="1576516657443" duration="2972000" />
       <workItem from="1578229837336" duration="3457000" />
       <workItem from="1578237160028" duration="1729000" />
-      <workItem from="1578834718520" duration="3865000" />
+      <workItem from="1578834718520" duration="4549000" />
     </task>
     <servers />
   </component>
@@ -218,9 +220,9 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="458" y="326" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1578837616545" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1578837552763">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1578841116029">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1578837552763" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1578841116029" />
   </component>
 </project>
