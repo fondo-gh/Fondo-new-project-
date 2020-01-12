@@ -1,7 +1,7 @@
 <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
     <div class="brand-sidebar">
         <h1 class="logo-wrapper">
-            <a class="brand-logo darken-1" href="#"><img src="{{ asset('app-assets/images/logo/materialize-logo-color.png') }}" alt="materialize logo"/><span class="logo-text hide-on-med-and-down">Fondo Investor</span></a>
+            <a class="brand-logo darken-1" href="#"><img src="{{ asset('app-assets/images/logo/materialize-logo-color.png') }}" alt="materialize logo"/><span class="logo-text hide-on-med-and-down">Fondo Admin</span></a>
         </h1>
     </div>
     <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">

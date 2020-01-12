@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 /*Admin routes*/
 
-Route::group(['prefix', 'admin'], function() {
+Route::group(['prefix' => 'admin'], function() {
     Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
 
     /* Admin Routes for Authentication*/

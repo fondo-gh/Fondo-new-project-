@@ -167,7 +167,7 @@
 {{--                            <div class="input-field col s6 m6 l6">--}}
 {{--                                <p class="margin medium-small"><a href="{{ route('admin.register') }}">Register Now!</a></p>--}}
 {{--                            </div>--}}
-                            <div class="input-field col s6 m6 l6">
+                            <div class="input-field col s6 m6 l6 offset-l2">
                                 <p class="margin right-align medium-small"><a href="#">Forgot password ?</a></p>
                             </div>
                         </div>
