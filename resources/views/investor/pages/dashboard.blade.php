@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/magnific-popup/magnific-popup.css') }}">
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css"
-          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
-    <link rel="stylesheet" type="text/css"
-          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+{{--    <link rel="stylesheet" type="text/css"--}}
+{{--          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">--}}
+{{--    <link rel="stylesheet" type="text/css"--}}
+{{--          href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/hover-effects/media-hover-effects.css') }}">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->

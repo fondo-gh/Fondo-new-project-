@@ -4,11 +4,12 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- BEGIN: VENDOR CSS-->
 <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/animate-css/animate.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/fonts/fontawesome/css/all.min.css') }}">
 <!-- END: VENDOR CSS-->
 <!-- BEGIN: Page Level CSS-->
-<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/materialize.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-modern-menu-template/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-menu-nav-dark-template/materialize.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/vertical-menu-nav-dark-template/style.css') }}">
 <!-- END: Page Level CSS-->
 <!-- BEGIN: Custom CSS-->
 <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/custom/custom.css') }}">

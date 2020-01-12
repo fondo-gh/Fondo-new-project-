@@ -20,7 +20,7 @@
 
 </head>
 <!-- END: Head-->
-<body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu 2-columns  " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
+<body class="vertical-layout page-header-light vertical-menu-collapsible vertical-menu-nav-dark 2-columns" data-open="click" data-menu="vertical-menu-nav-dark" data-col="2-columns">
 
 <!-- BEGIN: Header-->
 @include('partials.headers._user_header')

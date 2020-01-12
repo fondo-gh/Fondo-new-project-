@@ -9,3 +9,28 @@ NOTE:
 ------
 PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+
+.gradient-45deg-gold
+{
+    background: #FFD700;
+    background: -webkit-linear-gradient(45deg, #FFD700, #808080) !important;
+    background: -moz- oldlinear-gradient(45deg, #FFD700, #808080) !important;
+    background:      -o-linear-gradient(45deg, #FFD700, #808080) !important;
+    background:         linear-gradient(45deg, #FFD700, #808080) !important;
+}
+
+.gradient-45deg-grey
+{
+    background: #808080;
+    background: -webkit-linear-gradient(45deg, #808080, #808080) !important;
+    background: -moz- oldlinear-gradient(45deg, #808080, #808080) !important;
+    background:      -o-linear-gradient(45deg, #808080, #808080) !important;
+    background:         linear-gradient(45deg, #808080, #808080) !important;
+}
+
+.gradient-45deg-gold.gradient-shadow
+{
+    -webkit-box-shadow: 0 6px 20px 0 rgba(255, 204, 188, .5) !important;
+    box-shadow: 0 6px 20px 0 rgba(255, 204, 188, .5) !important;
+}
