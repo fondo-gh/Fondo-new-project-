@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0488fde-f129-4d35-af04-fa0728d4507a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/fondoApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fondoApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b0488fde-f129-4d35-af04-fa0728d4507a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,17 +146,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/investor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/investor" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Investor" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/app-assets/images/avatar" />
       <recent name="$PROJECT_DIR$/resources/views/admin/pages" />
-      <recent name="$PROJECT_DIR$/public/app-assets/background" />
-      <recent name="$PROJECT_DIR$/resources/views/admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,7 +193,7 @@
       <workItem from="1576516657443" duration="2972000" />
       <workItem from="1578229837336" duration="3457000" />
       <workItem from="1578237160028" duration="1729000" />
-      <workItem from="1578834718520" duration="849000" />
+      <workItem from="1578834718520" duration="3865000" />
     </task>
     <servers />
   </component>
@@ -215,5 +212,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="326" key="NewPhpFileDialog" timestamp="1578837616545">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="458" y="326" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1578837616545" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1578837552763">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1578837552763" />
   </component>
 </project>
