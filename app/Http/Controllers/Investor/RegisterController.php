@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Investor;
 
 use App\Admin;
 use App\Http\Controllers\Controller;
+use App\Investor;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin/dashboard';
+    protected $redirectTo = '/investor/dashboard';
 
     /**
      * Create a new controller instance.
@@ -38,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest:admin');
+        $this->middleware('guest:investor');
     }
 
 
@@ -50,7 +51,7 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('admin.register');
+        return view('investor.register');
     }
 
     /**
@@ -72,11 +73,11 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Admin
+     * @return \App\Investor
      */
     protected function create(array $data)
     {
-        return Admin::create([
+        return Investor::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -91,6 +92,6 @@ class RegisterController extends Controller
      */
     protected function guard()
     {
-        return Auth::guard('admin');
+        return Auth::guard('investor');
     }
 }

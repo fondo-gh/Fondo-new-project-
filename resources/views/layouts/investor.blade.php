@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
-        @yield('title', 'Fondo Admin | Welcome')
+        @yield('title', 'Fondo Investor | Welcome')
     </title>
 
     @include('partials.styles._styles')
@@ -21,11 +21,11 @@
 <body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu 2-columns  " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
 
 <!-- BEGIN: Header-->
-@include('partials.headers._admin_header')
+@include('partials.headers._investor_header')
 <!-- END: Header-->
 
 <!-- BEGIN: SideNav-->
-@include('partials.headers._admin_side_nav')
+@include('partials.headers._investor_side_nav')
 <!-- END: SideNav-->
 
 @include('partials.alerts._errors')

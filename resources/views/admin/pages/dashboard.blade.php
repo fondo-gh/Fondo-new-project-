@@ -19,54 +19,7 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
-        <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
-            <!-- Search for small screen-->
-            <div class="container">
-                <div class="row">
-                    <div class="col s10 m6 l6">
-                        <h5 class="breadcrumbs-title mt-0 mb-0">Startup Page</h5>
-                        <ol class="breadcrumbs mb-0">
-                            <li class="breadcrumb-item"><a href="#">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item active">Startup Page ({{ $startups->count() }})
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12">
-            <div class="container">
-                <div class="section">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="caption mb-0">Displaying all startup(s)</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <h4 class="col s12">All Categories</h4>
-                        <div class="col s12 m6 grid">
-                            @foreach($startups as $startup)
-                                <figure class="effect-sarah">
-                                    <img src="{{ asset('uploads/'. $startup->image) }}" alt="img13"/>
-                                    <figcaption>
-                                        <h2>{{ $startup->name }}
-                                            <span>{{ $startup->category }}</span>
-                                        </h2>
-                                        <p>{{ $startup->description }}</p>
-                                        <a href="{{ route('investor.startup.show', $startup->id) }}">View more</a>
-                                    </figcaption>
-                                </figure>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1>Hello admin</h1>
 @endsection
 
 @section('scripts')

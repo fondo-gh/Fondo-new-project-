@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use function Couchbase\basicEncoderV1;
 
 class RedirectIfAuthenticated
 {
@@ -26,10 +27,14 @@ class RedirectIfAuthenticated
         switch ($guard) {
             case 'admin':
                 if (Auth::guard($guard)->check()) {
-                    return redirect('/dashboard');
+                    return redirect('/admin/dashboard');
                 }
                 break;
-
+            case 'investor':
+                if (Auth::guard($guard)->check()) {
+                    return redirect('/investor/dashboard');
+                }
+                break;
             default:
                 if (Auth::guard($guard)->check()) {
                     return redirect('/home');

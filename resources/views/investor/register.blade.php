@@ -42,13 +42,13 @@
         <div class="container"><div id="register-page" class="row">
                 <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 register-card bg-opacity-8">
 
-                    <form class="login-form" method="POST" action="{{ route('admin.register') }}">
+                    <form class="login-form" method="POST" action="{{ route('investor.register') }}">
                         @csrf
 
                         <div class="row">
                             <div class="input-field col s12">
                                 <h5 class="ml-4">Register</h5>
-                                <p class="ml-4">Join our community now as an Admin!</p>
+                                <p class="ml-4">Join our community now as an Investor!</p>
                             </div>
                         </div>
                         <div class="row margin">
@@ -95,7 +95,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <p class="margin medium-small"><a href="{{ route('admin.login') }}">Already have an account? Login</a></p>
+                                <p class="margin medium-small"><a href="{{ route('investor.login') }}">Already have an account? Login</a></p>
                             </div>
                         </div>
                     </form>

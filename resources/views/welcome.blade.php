@@ -63,7 +63,7 @@
 
                                     <div class="col s12 m6">
                                         <div class="card card-hover z-depth-0 card-border-gray">
-                                            <a href="{{ route('admin.register') }}">
+                                            <a href="{{ route('investor.register') }}">
                                                 <div class="card-content center-align">
                                                     <h5><b>Investor</b></h5>
                                                     <i class="material-icons md-48 red-text">favorite_border</i>
