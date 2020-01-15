@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 /*Admin routes*/
 
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+    Route::resource('admins', 'AdminController');
 
     /* Admin Routes for Authentication*/
     Route::get('/login', 'Admin\LoginController@showLoginForm')->name('admin.login');

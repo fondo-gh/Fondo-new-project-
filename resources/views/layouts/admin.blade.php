@@ -32,6 +32,27 @@
 
 <!-- BEGIN: Page Main-->
 <div id="main">
+    <div class="row">
+        <div class="breadcrumbs-inline pt-3 pb-1" id="breadcrumbs-wrapper">
+            <!-- Search for small screen-->
+            <div class="container">
+                <div class="row">
+                    <div class="col s10 m6 l6 breadcrumbs-left">
+                        <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down">
+                            @yield('header-title', 'Dashboard')
+                        </h5>
+                        <ol class="breadcrumbs mb-0">
+                            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                @yield('header-title', 'Dashboard')
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     @yield('content')
 </div>
 <!-- END: Page Main-->
